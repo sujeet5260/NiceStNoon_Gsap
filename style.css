@@ -1,78 +1,182 @@
-
 @font-face {
-    font-family: NANFONT;
+    font-family: chacha;
     src: url(./64eda5e5fdd71ddd3dbbf609_apercu-regular.woff2);
 }
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@font-face {
+    font-family: chachi;
+    src: url(./64eda5e581cb8e58ed55dea5_apercu-medium.woff2);
 }
 
+@font-face {
+    font-family: chacha2;
+    src: url(./6479b994523a6279a03d4da7_Siaga-Bold.woff2);
+}
+
+@font-face {
+    font-family: larken;
+    src: url(./LarkenDEMO-Bold.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: chacha;
+}
 html,body{
-    width: 100%;
     height: 100%;
+    width: 100%;
 }
 
 body{
-    background-color:#E4E4E4 ;
-    font-family: NANFONT;
+    background-color: #E4E4E4;
 }
-
-/* ========================================== NAVBAR ========================================= */
 nav{
     display: flex;
-    align-items: center;
+    align-items:center ;
     justify-content: space-between;
-    padding: 1rem 5rem;
+    padding: 20px 50px;
 }
-nav #logo{
-    width: 12rem;
 
-}
-nav > #center-logo{
-    width: 3rem;
-}
-nav > ul{
+.part3{
     display: flex;
-    list-style-type:none;
-    gap: 1rem;
-    /* padding: 1rem ; */
-
+    gap: 20px;
 }
-nav > ul h4{
-    font-size: 1.2rem;
-    font-weight: 100;
-    padding: 1rem 1.5rem;
-    border: 1px solid black;
-    border-radius: 1rem;
+
+.part3 h4{
+    padding: 7px 15px;
+    border: 1px solid #000;
+    font-size: 18px;
+    border-radius: 7px;
     cursor: pointer;
     transition: all ease 0.3s;
 }
-nav > ul h4:hover{
+
+.part3 h4:hover{
     background-color: #000;
     color: #fff;
-    
+}
 
+#n{
+
+    animation-name: rotate;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
-#center-logo{
-    animation: rotation 6s linear  infinite;
-}
-@keyframes rotation {
+
+@keyframes rotate {
     100%{
-        rotate:360deg;
+        rotate: 360deg;
     }
-    
 }
 
 
+.hero-section{
+    display: flex;
+    align-items: flex-end;
+    margin-top: 50px;
+    padding: 20px 50px;
+    justify-content: space-between;
 
-/* ========================== PAGE 1 ====================================== */
-.page1{
-    height: 100vh;
+}
+
+.hero-section h1{
+    font-size: 100px;
+    font-family: larken;
+    line-height: 1;
+}
+
+.hero-2{
+    width: 23%;
+}
+.hero-2 p{
+    font-size: 20px;
+}
+
+.hero-2 button{
+    background-color: #fff;
+    color: #000;
+    padding: 12px 25px;
+    font-size: 16px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.image-section{
+    display: flex;
+    gap: 30px;
+    padding: 40px 0;
+    transform: translateX(-20%);
+}
+
+.image-section img{
+    height:650px;
+    width: 450px;
+    object-fit: cover;
+    border-radius: 120px;
+}
+
+.section2{
+    margin-top: 10vh;
+    min-height: 100vh;
+    padding: 40px 60px;
+}
+
+.section2 h1{
+    font-size: 9.5vw;
+    text-transform: uppercase;
+    font-family: chacha2;
+    line-height: 1;
+    text-align: center;
+    position: relative;
+}
+
+.section2 h1::after{
+    content: "Gotta see 'm all";
+    font-family: chacha;
+    background-color: #F4C728;
+    font-size: 17px;
+    text-transform: none;
+    padding: 25px 30px;
+    border-radius: 30px;
+    position: absolute;
+    bottom: -8%;
+    right: 25%;
+    rotate: -10deg;
+}
+
+.section2-image-container{
+    margin-top: 10vh;
     width: 100%;
+    height: 65vh;
+    border-radius: 30px;
+    background-image: url(https://cdn.prod.website-files.com/648884be5f32a12e5da2392f/65492b562e62e676d4159713_NS_Wayfinding%20_%20NaN-p-2600.jpg);
+    background-size: 100%;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.7s;
 }
 
+.section2-image-container img{
+    height: 65%;
+    opacity: 0;
+    transition: all ease 0.7s;
+    border-radius: 0;
+}
 
+.section2-image-container:hover{
+    border-radius: 120px;
+    background-size: 110%;
+}
 
+.section2-image-container:hover img{
+    opacity: 1;
+    border-radius: 70px;
+
+}
